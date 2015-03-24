@@ -1,0 +1,89 @@
+﻿<Window x:Class="DComposer.ModiferEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modifiers" Height="315" Width="445" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="{StaticResource ResourceKey=ShadeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="175"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Save" Grid.Column="2" HorizontalAlignment="Left" Margin="100,2,0,-1" Grid.Row="10" VerticalAlignment="Top" Width="75" Height="25" Click="Button_Click"/>
+
+        <TextBox Grid.Row="0" Grid.Column="0" Text="{Binding Path=Modifiers[0].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[0].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding Path=Modifiers[0].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding Path=Modifiers[1].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[1].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding Path=Modifiers[1].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Path=Modifiers[2].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[2].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Path=Modifiers[2].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="3" Grid.Column="0" Text="{Binding Path=Modifiers[3].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[3].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Path=Modifiers[3].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="4" Grid.Column="0" Text="{Binding Path=Modifiers[4].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[4].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Path=Modifiers[4].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="5" Grid.Column="0" Text="{Binding Path=Modifiers[5].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[5].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Text="{Binding Path=Modifiers[5].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="6" Grid.Column="0" Text="{Binding Path=Modifiers[6].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[6].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding Path=Modifiers[6].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="7" Grid.Column="0" Text="{Binding Path=Modifiers[7].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[7].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="7" Grid.Column="2" Text="{Binding Path=Modifiers[7].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="8" Grid.Column="0" Text="{Binding Path=Modifiers[8].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="8" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[8].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="8" Grid.Column="2" Text="{Binding Path=Modifiers[8].Value,Mode=TwoWay}"/>
+
+        <TextBox Grid.Row="9" Grid.Column="0" Text="{Binding Path=Modifiers[9].Skill,Mode=TwoWay}"/>
+        <ComboBox Grid.Row="9" Grid.Column="1" ItemsSource="{Binding ComboboxModiferTypes}" 
+                  DisplayMemberPath="ValueConditionString" SelectedValuePath="ValueConditionEnum" 
+                  SelectedValue="{Binding Path=Modifiers[9].Type,Mode=TwoWay }"/>
+        <TextBox Grid.Row="9" Grid.Column="2" Text="{Binding Path=Modifiers[9].Value,Mode=TwoWay}"/>
+        <Button Content="Clear" Grid.Column="2" HorizontalAlignment="Left" Margin="10,2,0,-1" Grid.Row="10" Width="75" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

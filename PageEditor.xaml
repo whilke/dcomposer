@@ -1,0 +1,31 @@
+﻿<Window x:Class="DComposer.PageEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding Path=Label}" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        Background="{StaticResource ResourceKey=ShadeBrush}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="183"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="343"/>
+        </Grid.RowDefinitions>
+        <TextBox  FontSize="16" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Path=DisplayText}"/>
+
+        <Grid Grid.Row="1" x:Name="OptionsGrid" Grid.ColumnSpan="2" Background="{StaticResource ResourceKey=ShadeBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="83*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="23,-315,0,0" TextWrapping="Wrap" Text="{Binding Path=Label,Mode=TwoWay}" VerticalAlignment="Top" Width="162"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="23,-336,0,0" TextWrapping="Wrap" Text="Label:" VerticalAlignment="Top" Height="16" Width="31"/>
+            <StackPanel x:Name="stackPanel" Grid.Column="0" Grid.ColumnSpan="2" >
+            </StackPanel>
+            <Button Grid.Column="1" Content="Save" RenderTransformOrigin="0.514,0.662" Margin="111,-40,10,357" Click="Button_Click"/>
+            <Button Content="Parent" Grid.Column="1" HorizontalAlignment="Left" Margin="111,-71,0,0" VerticalAlignment="Top" Width="74" Height="26" Click="Button_Click_1"/>
+
+        </Grid>
+    </Grid>
+</Window>

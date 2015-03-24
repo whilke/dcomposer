@@ -1,0 +1,9 @@
+﻿<Window x:Class="DComposer.RebindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rebind" Height="341" Width="400" ResizeMode="NoResize" Background="{StaticResource ResourceKey=NormalBrush}">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="394" x:Name="lstDialogs"/>
+        <Button Click="Button_Click" Content="Bind" HorizontalAlignment="Left" Margin="319,274,0,0" VerticalAlignment="Top" Width="75" Height="29"/>
+    </Grid>
+</Window>
