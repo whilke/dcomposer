@@ -16,7 +16,8 @@ namespace DComposer
         Add,
         Subtract,
         Multiply,
-        Divide
+        Divide,
+        Execute
     }
 
     public class ComboBoxModiferType
@@ -36,7 +37,8 @@ namespace DComposer
                     return "*";
                 if (ValueConditionEnum == ModifierTypes.Divide)
                     return "/";
-
+                if (ValueConditionEnum == ModifierTypes.Execute)
+                    return "^";
                 return "";
             }
             set
@@ -51,6 +53,8 @@ namespace DComposer
                     ValueConditionEnum = ModifierTypes.Multiply;
                 if (value == "/")
                     ValueConditionEnum = ModifierTypes.Divide;
+                if (value == "^")
+                    ValueConditionEnum = ModifierTypes.Execute;
             }
         }
     }
@@ -60,7 +64,8 @@ namespace DComposer
         Equal = 0,
         NotEqual,
         LessThan,
-        GreaterThan
+        GreaterThan,
+        Execute
     }
 
     public class ComboBoxConditionType
@@ -117,6 +122,9 @@ namespace DComposer
                     return "*";
                 if (Type == ModifierTypes.Divide)
                     return "/";
+                if (Type == ModifierTypes.Execute)
+                    return "^";
+
 
                 return "";
             }
@@ -303,6 +311,7 @@ namespace DComposer
             mStaticModifers.Add(new ComboBoxModiferType() { ValueConditionEnum = ModifierTypes.Subtract });
             mStaticModifers.Add(new ComboBoxModiferType() { ValueConditionEnum = ModifierTypes.Multiply });
             mStaticModifers.Add(new ComboBoxModiferType() { ValueConditionEnum = ModifierTypes.Divide });
+            mStaticModifers.Add(new ComboBoxModiferType() { ValueConditionEnum = ModifierTypes.Execute });
         }
         public DialogOption()
         {

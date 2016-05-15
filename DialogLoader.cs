@@ -144,6 +144,9 @@ namespace DComposer
                         case "/":
                             option.Modifiers[i].Type = ModifierTypes.Divide;
                             break;
+                        case "^":
+                            option.Modifiers[i].Type = ModifierTypes.Execute;
+                            break;
                     }
                 }
 
